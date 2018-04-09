@@ -1,0 +1,68 @@
+/*Richard Zacho*/
+html, body 
+{
+    color: white;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 1280px;
+    height: 720px;
+    background-image: url(images/background.jpg)
+}
+
+html, body, .continent
+{margin: auto; padding: auto;}
+
+.container, .continent, #anim-container
+{position: relative;}
+
+#anim-container
+{bottom: 790px;}
+
+.container
+{
+    left: 500px;
+    bottom: -50px;
+    height: 50px;
+    width: 50px;
+}
+
+.continent
+{
+    z-index: 10;
+    height: auto;
+    width: auto;
+    transition: all .5s;
+}
+
+.container:hover .europe, 
+.container:hover .asia, 
+.container:hover .oceania, 
+.container:hover .greenland,
+.container:hover .africa,
+.container:hover .north-america, 
+.container:hover .south-america
+{
+    transform: scale(1.2);
+    z-index: 50;
+}
+
+.europe
+{bottom: 107px; left: 18px;}
+
+.africa
+{top: 213px;}
+
+.south-america
+{right: 307px; top: 293px;}
+
+.north-america
+{right: 500px; bottom: 100px;}
+
+.greenland
+{right: 130px; bottom: 300px;}
+
+.asia
+{left: 175px; bottom: 240px;}
+
+.oceania
+{left: 493px; top: 122px;}

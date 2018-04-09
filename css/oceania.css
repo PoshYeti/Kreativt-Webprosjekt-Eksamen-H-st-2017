@@ -1,0 +1,85 @@
+/*Richard Zacho*/
+html, body 
+{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+}
+
+html, body, #anim-container, #oceania
+{margin: auto; padding: auto;}
+
+html, body, #anim-container
+{width:  1280px; height: 720px;}
+
+html, body, #anim-container
+{overflow: hidden;}
+
+#anim-container, #oceania-container, #oceania, .pin, #pin-australia
+{position: relative;}
+
+#anim-container
+{bottom: 700px; left:100px;}
+
+#oceania-container
+{bottom: 0px;}
+
+#oceania
+{
+    height: 650px;
+    left: 250px;
+    top: 0px;
+    opacity: 0;
+    z-index: 5;
+    
+    animation: fadeIn 10s forwards;
+    animation-delay: 1s;
+}
+
+.pin
+{
+    height: 50px;
+    width: 50px;
+    bottom: 130px;
+    left: 290px;
+}
+
+#pin-australia
+{
+    height: 100px;
+    width: 65px;
+    left: 235px;
+    bottom: 1000px;
+    z-index: 50;
+    
+    animation: pinAustralia 3s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes pinAustralia
+{
+    0% {bottom: 1000px;}
+    100% {bottom: 90px;}
+}
+
+.text-australia
+{
+    position: relative;
+    opacity: 0;
+    bottom:185px;
+    left: 300px;
+    animation: textAustralia 0.5s infinite ease-out alternate;
+    animation-delay: 6s;
+    z-index: 50;
+}
+
+@keyframes textAustralia
+{
+    0%{left 300px; opacity: 1;}
+    100%{left: 310px; opacity: .4;}
+}
+
+@keyframes fadeIn
+{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

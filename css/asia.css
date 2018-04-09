@@ -1,0 +1,153 @@
+/*Richard Zacho*/
+html, body 
+{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+}
+
+html, body, #anim-container, #asia
+{margin: auto; padding: auto;}
+
+html, body, #anim-container
+{width:  1280px; height: 720px;}
+
+html, body, #anim-container
+{overflow: hidden;}
+
+#anim-container, #asia-container, #asia, .pin, #pin-china, #pin-north-korea, #pin-japan
+{position: relative;}
+
+#anim-container
+{bottom: 700px; left:100px;}
+
+#asia-container
+{bottom: 0px;}
+
+#asia
+{
+    height: 650px;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    z-index: 5;
+    
+    animation: fadeIn 10s forwards;
+    animation-delay: 1s;
+}
+
+.pin
+{
+    height: 50px;
+    width: 50px;
+    bottom: 130px;
+    left: 400px;
+    z-index: 50;
+}
+
+.text
+{
+    position: relative; 
+    opacity: 0;
+}
+
+#pin-china
+{
+    height: 100px;
+    width: 65px;
+    left: 0px;
+    bottom: 700px;
+    z-index: 50;
+    
+    animation: pinChina 3s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes pinChina
+{
+    0% {bottom: 700px;}
+    100% {bottom: 270px;}
+}
+
+.text-china
+{
+    bottom: 375px;
+    left: 60px;
+    animation: textChina 0.5s infinite ease-out alternate;
+    animation-delay: 6s;
+}
+
+@keyframes textChina
+{
+    0%{left 60px; opacity: 1;}
+    100%{left: 70px; opacity: .4;}
+}
+
+#pin-north-korea
+{
+    height: 100px;
+    width: 65px;
+    left: 200px;
+    bottom: 800px;
+    z-index: 50;
+    
+    animation: pinNorthKorea 3s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes pinNorthKorea
+{
+    0% {bottom: 810px;}
+    100% {bottom: 390px;}
+}
+
+.text-north-korea
+{
+    bottom: 490px;
+    left: 145px;
+    animation: textNorthKorea 0.5s infinite ease-out alternate;
+    animation-delay: 6s;
+}
+
+@keyframes textNorthKorea
+{
+    0%{left 145px; opacity: 1;}
+    100%{left: 135px; opacity: .4;}
+}
+
+#pin-japan
+{
+    height: 100px;
+    width: 65px;
+    left: 285px;
+    bottom: 900px;
+    z-index: 50;
+    
+    animation: pinJapan 3s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes pinJapan
+{
+    0% {bottom: 900px;}
+    100% {bottom: 420px;}
+}
+
+.text-japan
+{
+    bottom: 520px;
+    left: 370px;
+    animation: textJapan 0.5s infinite ease-out alternate;
+    animation-delay: 6s;
+}
+
+@keyframes textJapan
+{
+    0%{left 370px; opacity: 1;}
+    100%{left: 360px; opacity: .4;}
+}
+
+@keyframes fadeIn
+{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

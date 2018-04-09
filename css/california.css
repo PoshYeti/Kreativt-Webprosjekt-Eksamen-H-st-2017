@@ -1,0 +1,147 @@
+/*Richard Zacho*/
+html, body 
+{height: 100%;}
+
+html, body, #anim-container, #virtual-container, #california-container, #person-container
+{padding: auto; margin: auto;}
+
+#anim-container, #virtual-container, #virtual, #california-container, #california, #california-new-container, #caifornia-new, #person-container,
+#person, #person-text-1, #person-text-2, #usa-container, #usa, .pin, #pin-california, #pin-new-york
+{position: relative;}
+
+html, body #anim-container, #california, #california-new, #usa
+{width: 1280px; height: 720px;}
+
+#anim-container
+{overflow: hidden; bottom: 782px;}
+
+#virtual-container
+{
+    width: 50px;
+    height: 50px;
+    bottom: -700px;
+    left: 0px;
+}
+
+#virtual
+{
+    width: 200px;
+    left: 200px;
+    animation: moveVR 4s linear forwards;
+    animation-delay: 10s;
+    z-index: 25;
+}
+
+@keyframes moveVR 
+{
+    0%{bottom:  0px; left: 0px; width: 200px; opacity: 1;}
+    40%{bottom: 275px; left: 0px; width: 200px; opacity: 1;}
+    80%{bottom: 1400px; left: -1900px; width: 4000px; opacity: 1;}
+    100%{bottom: 1400px; left: -1900px; width: 4000px; opacity: 0;}
+}
+
+#california-container
+{
+    width: 50px;
+    height: 50px;
+    left: -615px;
+}
+
+#california
+{
+    z-index: 1;
+    animation: fadeOldCity 20s linear forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@keyframes fadeOldCity 
+{
+    0%{opacity: 0}
+    25%{opacity: 1}
+    50%{opacity: 1}
+    75%{opacity: 0}
+    100%{opacity: 0}
+}
+
+#california-new-container
+{
+    width: 50px;
+    height: 50px;
+    left: 0px;
+    bottom: 100px;
+}
+
+#california-new
+{
+    opacity: 0;
+    bottom: 0px;
+    left: 50px;
+    z-index: 10;
+    animation: fadeNewCity 2.5s linear forwards;
+    animation-delay: 14s;
+}
+
+@keyframes fadeNewCity 
+{
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+
+#person-container
+{
+    width: 50px;
+    height: 50px;
+    left: 450px;
+    top: 250px;
+}
+
+#person
+{
+    display: block;
+    width: 200px;
+    z-index: 15;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 4s;
+}
+
+#person-text-1
+{
+    width: 1300px;
+    padding: 0.5rem;
+    border-radius: 50px;
+    font-size: 45px;
+    font-family: fantasy;
+    right: 900px;
+    bottom: 700px;
+    z-index: 15;
+    opacity: 0;
+    animation: fadeIn 6s linear;
+    animation-delay: 5.5s;
+}
+
+@keyframes fadeIn
+{
+    0%{opacity: 0}
+    50%{opacity: 1}
+    100%{opacity: 1}
+}
+
+#person-text-2
+{
+    padding: 0.5rem;
+    border-radius: 200px;
+    font-size: 20px;
+    font-family: fantasy;
+    text-align: center;
+    right: 500px;
+    bottom: 600px;
+    width: 600px;
+    background-color: darkgray;
+    color: ghostwhite;
+    z-index: 15;
+    opacity: 0;
+    animation: fadeIn 2.5s linear forwards;
+    animation-delay: 15s;
+}

@@ -1,0 +1,157 @@
+/*Frithjof Solheim*/
+html, body{
+  
+    margin: auto; 
+    padding: auto;
+    width:  1280px; 
+    height: 720px;
+    overflow: hidden;
+}
+
+#anim-container{
+    bottom: 786px;
+    margin: auto;
+    padding: auto;
+    height: 720px;
+    width: 1280px;
+    position: relative; 
+}
+
+#bakgrunn{
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+}
+
+#pablo-container{
+    position: absolute;
+}
+
+
+#pablo{
+    width: 500px;
+    position: relative;
+    left: 1000px;
+    bottom: -800px;
+    animation: pabloMove 3s forwards;
+    animation-delay: 3s;
+    transform: scaleX(-1);
+    z-index: 101;
+}
+
+#pablo-tekst{
+    position: absolute;
+    text-align: center;
+    font-family: fantasy;
+    width: 400px;
+    height: 250px;
+    color: black;
+    background-color: white;
+    color: black;
+    top: 30px;
+    left: 850px;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 20px;
+    opacity: 0;
+}
+
+#pablo:hover ~ #pablo-tekst{
+    opacity: 1;
+}
+
+#gondol-container{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+#gondol{
+    
+    position: absolute;
+    animation: gondolMove 15s infinite;
+    animation-delay: 10s;
+    top: 200px;
+    left: 550px;
+    width: 200px;
+    opacity: 0;
+}
+
+#drone-container{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    left: -100px;
+    z-index: 100;
+}
+
+#drone{
+    left: 400px;
+    position: absolute;
+    top: 10px;
+    animation: droneMove 7s ease-in-out forwards;
+    animation-play-state: paused;
+    -webkit-animation: droneMove 7s ease-in-out forwards;
+    -webkit-animation-play-state: paused;
+}
+
+#pablo:active ~ #drone{
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+}
+
+@keyframes pabloMove{
+    0%{
+        bottom: -800px;
+    }
+    100%{
+        bottom: -410px;
+    }
+}
+
+@keyframes gondolMove{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+        
+    }
+    50%{
+        top: -30px;
+    }
+    75%{
+        top: -100px;
+    }
+    100%{
+        opacity: 1;
+        top: -100px;
+        left: -400px;
+        width: 400px;
+    }
+}
+
+@keyframes droneMove{
+    0%{
+        top: 300px;
+        width: 30px;
+        
+    }
+    100%{
+        top: 100px;
+        width: 500px;
+    }
+}
+
+@-webkit-keyframes droneMove{
+    0%{
+        top: 300px;
+        width: 30px;
+        
+    }
+    100%{
+        top: 100px;
+        width: 500px;
+    }
+}

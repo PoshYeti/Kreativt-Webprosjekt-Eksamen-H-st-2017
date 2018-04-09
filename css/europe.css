@@ -1,0 +1,153 @@
+/*Richard Zacho*/
+html, body 
+{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+}
+
+html, body, #anim-container, #europe
+{margin: auto; padding: auto;}
+
+html, body, #anim-container
+{width:  1280px; height: 720px;}
+
+html, body, #anim-container
+{overflow: hidden;}
+
+#anim-container, #europe-container, #europe, .pin, #pin-norway, #pin-russia, #pin-germany
+{position: relative;}
+
+#anim-container
+{bottom: 700px; left:100px;}
+
+#europe-container
+{bottom: 0px;}
+
+#europe
+{
+    height: 650px;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    z-index: 5;
+    
+    animation: fadeIn 10s forwards;
+    animation-delay: 1s;
+}
+
+.pin
+{
+    height: 50px;
+    width: 50px;
+    bottom: 140px;
+    left: 290px;
+    z-index: 50;
+}
+
+.text
+{
+    position: relative; 
+    opacity: 0;
+}
+
+#pin-norway
+{
+    height: 100px;
+    width: 65px;
+    left: 10px;
+    bottom: 700px;
+    z-index: 50;
+    
+    animation: pinNorway 3s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes pinNorway
+{
+    0% {bottom: 700px;}
+    100% {bottom: 420px;}
+}
+
+.text-norway
+{
+    bottom: 520px;
+    left: 80px;
+    animation: textNorway 0.5s infinite ease-out alternate;
+    animation-delay: 6s;
+}
+
+@keyframes textNorway
+{
+    0%{left 80px; opacity: 1;}
+    100%{left: 90px; opacity: .4;}
+}
+
+#pin-russia
+{
+    height: 100px;
+    width: 65px;
+    left: 440px;
+    bottom: 800px;
+    z-index: 50;
+    
+    animation: pinRussia 3s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes pinRussia
+{
+    0% {bottom: 800px;}
+    100% {bottom: 410px;}
+}
+
+.text-russia
+{
+    bottom: 510px;
+    left: 510px;
+    animation: textRussia 0.5s infinite ease-out alternate;
+    animation-delay: 6s;
+}
+
+@keyframes textRussia
+{
+    0%{left 510px; opacity: 1;}
+    100%{left: 520px; opacity: .4;}
+}
+
+#pin-germany
+{
+    height: 100px;
+    width: 65px;
+    left: 20px;
+    bottom: 900px;
+    z-index: 50;
+    
+    animation: pinGermany 3s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes pinGermany
+{
+    0% {bottom: 900px;}
+    100% {bottom: 360px;}
+}
+
+.text-germany
+{
+    bottom: 460px;
+    left: 100px;
+    animation: textGermany 0.5s infinite ease-out alternate;
+    animation-delay: 6s;
+}
+
+@keyframes textGermany
+{
+    0%{left 100px; opacity: 1;}
+    100%{left: 110px; opacity: .4;}
+}
+
+@keyframes fadeIn
+{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

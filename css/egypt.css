@@ -1,0 +1,116 @@
+/*Leo Jensen*/
+#container{
+    overflow: hidden;
+    height: 720px;
+    width: 1280px;
+    background-image: url(images/orken.jpg);
+    background-repeat: no-repeat;
+    margin: auto;
+    padding: auto;
+    position: relative;
+    bottom: 786px;
+    left: 0px;
+    z-index: 10;
+}
+
+#pyramid
+{
+    animation: pyramid1 2s infinite alternate ease-in-out;  
+    transform: scaleX(-1);
+    position: relative;
+    width:340px;
+    top: 120px;
+    left: 240px
+}
+
+#pyramid2
+{
+    animation: pyramid2 3s infinite alternate ease-in-out;  
+    transform: scaleX(-1);
+    position: relative;
+    width:100px;
+    top: 70px;
+    left: -280px
+                
+}
+
+#pyramid3
+{
+    animation: pyramid3 3s infinite alternate ease-in-out;  
+    position: relative;
+    width:160px;
+    top: 200px;
+    left: -280px
+        
+}
+
+#octa
+{
+    transform: scaleX(-1);
+    position: relative;
+    width:250px;
+    top: 18px;
+    left: 50px}
+
+#egrobot{
+  position: absolute;
+    width: 550px;
+    left: 930px;
+    bottom: -80px;
+    z-index: 10; 
+}
+
+
+
+@keyframes pyramid1{
+    0%{
+    top: 190px;
+    left: 240px;    
+    }
+    100%{
+    top: 200px;
+    left: 240px;  
+    }
+}
+    
+@keyframes pyramid2{
+    0%{
+    top: 70px;
+    left: -280px;    
+    }
+    100%{
+    top: 90px;
+    left: -280px;  
+        
+    } 
+}
+
+@keyframes pyramid3{
+    0%{
+    top: -80px;
+    left: -280px;    
+    }
+    100%{
+    top: -100px;
+    left: -280px;  
+        
+    } 
+}
+    
+#egrobot-tekst{
+    z-index: 10;
+    position: absolute;
+    color: black;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 40px;
+    width: 200px;
+    bottom: 360px;
+    left: 710px;
+    display: none; 
+    text-align: center;
+    }
+
+#egrobot:hover ~ #egrobot-tekst{
+    display: block;
+}    

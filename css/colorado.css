@@ -1,0 +1,325 @@
+/*Richard Bolstad & Frithjof Solheim*/
+#colorado-container{
+    overflow: hidden;
+    height: 720px;
+    width: 1280px;
+    background-image: url(images/coloradobakke.jpg);
+    margin: auto;
+    padding: auto;
+    position: relative;
+    bottom: 783px;
+    background-color: darkred;
+    z-index: 10;
+}
+
+#gitter1{
+    position: absolute;
+    left: 507px;
+    bottom: 157px;
+    z-index: 20;
+}
+
+#gitter2{
+    position: absolute;
+    width: 89px;
+    left: 549px;
+    bottom: 248px;
+    z-index: 20;
+}
+
+#gitter3{
+    position: absolute;
+    left: 587px;
+    bottom: 391px;
+    z-index: 20;
+}
+
+#gitter4{
+    position: absolute;
+    left: 615px;
+    bottom: 517px;
+    z-index: 20;
+}
+
+#bottom{
+    position: absolute;
+    z-index: 35;
+    bottom: 0;
+    right: 0;
+}
+
+#lindseyvonn{
+    position: absolute;
+    width: 400px;
+    bottom: -500px;
+    left: 0;
+    animation: lindseyvonn-move 3s linear forwards;
+    animation-delay: 3s;
+    z-index: 20;
+}
+
+@keyframes lindseyvonn-move{
+    0%{
+        bottom: -800px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+#lindseyvonn-tekst{
+    position: absolute;
+    color: black;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 40px;
+    width: 200px;
+    bottom: 300px;
+    left: 130px;
+    display: none;
+    text-align: center;
+    font-family: fantasy;
+}
+
+#lindseyvonn:hover ~ #lindseyvonn-tekst{
+    display: block;
+}
+
+#elevator{
+    position: absolute;
+    width: 70px;
+    transform: scaleX(-1);
+    left: 420px;
+    bottom: 0;
+    animation: elevator-up 12s linear infinite;
+    animation-delay: 4.8s;
+    
+}
+
+@keyframes elevator-up{
+    0%{
+        width: 70px;
+        left: 420px;
+        bottom: 0;
+    }
+    10%{
+        width: 70px;
+        left: 523px;
+        bottom: 140px;
+    }
+    15%{
+        width: 70px;
+        left: 523px;
+        bottom: 140px;
+    }
+    20%{
+        width: 60px;
+        left: 555px;
+        bottom: 220px;
+    }
+    30%{
+        width: 45px;
+        left: 600px;
+        bottom: 400px;
+        opacity: 1;
+    }
+    40%{
+        width: 30px;
+        left: 635px;
+        bottom: 562px;
+        opacity: 1;
+    }
+    50%{
+        width: 30px;
+        left: 635px;
+        bottom: 562px;
+        opacity: 0;
+    }
+    51%{
+        width: 30px;
+        left: 635px;
+        bottom: 562px;
+        opacity: 0;
+    }
+    100%{
+        width: 30px;
+        left: 635px;
+        bottom: 562px;
+        opacity: 0;
+    }
+}
+
+#skijump{
+    position: absolute;
+    width: 100px;
+    left: 1050px;
+    bottom: 350px;
+    z-index: 20;
+}
+
+.gate{
+    position: absolute;
+    width: 25px;
+    z-index: 30;
+}
+
+.gate1{
+    left: 510px;
+    bottom: 480px;
+}
+
+.gate2{
+    left: 480px;
+    bottom: 410px;
+}
+
+.gate3{
+    left: 495px;
+    bottom: 340px;
+}
+
+.gate4{
+    left: 470px;
+    bottom: 260px;
+}
+
+.gate5{
+    left: 465px;
+    bottom: 210px;
+}
+
+#skier1{
+    position: absolute;
+    width: 50px;
+    left: 550px;
+    bottom: 550px;
+    z-index: 21;
+    transform: scaleX(1);
+    animation: skier1-slalom 12s linear infinite;
+}
+
+@keyframes skier1-slalom{
+    0%{
+        width: 50px;
+        left: 550px;
+        bottom: 550px;
+    }
+    7.5%{
+        width: 60px;
+        left: 450px;
+        bottom: 480px;
+        transform: scaleX(-1)
+    }
+    15%{
+        width: 70px;
+        left: 500px;
+        bottom: 410px;
+        transform: scaleX(1);
+    }
+    22.5%{
+        width: 80px;
+        left: 420px;
+        bottom: 320px;
+        transform: scaleX(-1)
+    }
+    30%{
+        width: 90px;
+        left: 480px;
+        bottom: 250px;
+        transform: scaleX(1);
+    }
+    40%{
+        width: 100px;
+        left: 370px;
+        bottom: 190px;
+        transform: scaleX(-1);
+        z-index: 30;
+    }
+    50%{
+        width: 110px;
+        left: 450px;
+        bottom: 130px;
+        transform: scaleX(-1);
+        z-index: 31;
+        opacity: 1;
+    }
+    51%{
+        width: 110px;
+        left: 450px;
+        bottom: 130px;
+        transform: scaleX(-1);
+        opacity: 0;
+    }
+    100%{
+        width: 110px;
+        left: 450px;
+        bottom: 130px;
+        transform: scaleX(-1);
+        opacity: 0;
+    }
+}
+
+#skier2{
+    position: absolute;
+    width: 50px;
+    left: 660px;
+    bottom: 550px;
+    animation: skier2-jumping 12s linear infinite;
+}
+
+@keyframes skier2-jumping{
+    0%{
+        width: 50px;
+        left: 660px;
+        bottom: 550px;
+    }
+    12.5%{
+        width: 60px;
+        left: 1180px;
+        bottom: 470px;
+    }
+    25%{
+        width: 65px;
+        left: 1070px;
+        bottom: 355px;
+        transform: scaleX(-1);
+    }
+    30%{
+        width: 90px;
+        bottom: 400px;
+        left: 1000px;
+        transform: scaleX(-1);
+    }
+    32.5%{
+        left: 980px;
+    }
+    40%{
+        width: 80px;
+        bottom: 310px;
+        left: 950px;
+        transform: scaleX(-1);
+        z-index: 19;
+    }
+    50%{
+        width: 110px;
+        bottom: 130px;
+        left: 540px;
+        transform: scaleX(-1);
+        z-index: 31;
+        opacity: 1;
+    }
+    51%{
+        width: 110px;
+        bottom: 130px;
+        left: 540px;
+        transform: scaleX(-1);
+        opacity: 0;
+    }
+    100%{
+        width: 110px;
+        bottom: 130px;
+        left: 540px;
+        transform: scaleX(-1);
+        opacity: 0;
+    }
+}

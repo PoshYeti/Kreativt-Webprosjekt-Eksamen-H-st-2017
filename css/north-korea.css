@@ -1,0 +1,129 @@
+/*Ivar Nikolaisen*/
+html, body{
+    position: relative;
+    margin: auto; 
+    padding: auto;
+    background-color: black;
+    width:  1280px; 
+    height: 720px;
+    overflow: hidden; 
+}
+
+
+#anim-container{
+    position: relative;
+    margin: auto; 
+    padding: auto;
+    background-color: black;
+    background-image: url(images/north-korea.png);
+    bottom: 782px;
+    height: 720px;
+    width: 1280px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#phong{
+    position: absolute;
+    height: 400px;
+    width 200px;
+    bottom: 70px;
+    left: 550px;
+}
+
+#phong-text{
+    position: absolute;
+    color: black;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 40px;
+    width: 200px;
+    bottom: 450px;
+    left: 650px;
+    display: none;
+    z-index:100;
+    text-align: center;
+}
+
+#phong:hover ~ #phong-text{
+    display: block;
+    z-index: 100;
+}
+
+
+#canon-container{
+    position: relative;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    top: 500px;
+    margin: auto;
+    left:-800px;
+}
+
+#cannon{
+    position: absolute;
+    left: 300px;
+    bottom: 20px;
+    z-index: 1;
+}
+
+#green-bullet{
+    position: absolute;
+    width: 150px;
+    bottom: 180px;
+    animation: bulletFire 0.5s infinite;
+    display: none;
+}
+
+#cannon:hover ~ #green-bullet{
+    display: block;
+    
+}
+
+@keyframes bulletFire{
+    0%{
+        left: 310px;
+    }
+    50%{
+        left: 100;
+    }
+    100{
+        left: 10px;
+    }
+}
+
+#red-bullet{
+    position: absolute;
+    width: 110px;
+    bottom: 185px;
+    animation: bulletFire 0.2s infinite;
+    display: none;
+}
+
+#cannon:active ~ #red-bullet{
+    display: block;
+}
+
+#cannon:active ~#green-bullet{
+    display: none;
+}
+
+#cannon-text{
+    position: absolute;
+    color: black;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 40px;
+    width: 200px;
+    bottom: 400px;
+    left: 250px;
+    display: none;
+    z-index:100;
+    text-align: center;
+}
+
+#cannon:hover ~ #cannon-text{
+    display: block;
+    z-index: 100;
+}

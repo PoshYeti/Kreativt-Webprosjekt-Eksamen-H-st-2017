@@ -1,0 +1,208 @@
+/*Caroline Foss*/
+html, body{
+    position: relative;
+    margin: auto; 
+    padding: auto;
+    background-color: black;
+    width:  1280px; 
+    height: 720px;
+    overflow: hidden; 
+}
+
+#anim-container{
+    position: relative;
+    margin: auto; 
+    padding: auto;
+    background-color: black;
+    background-image: url(images/greenland.jpg);
+    background-repeat: no-repeat;
+    bottom: 782px;
+    height: 720px;
+    width: 1280px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/** ELON START **/
+#elon{
+    position: absolute;
+    left: 80px;
+    bottom: -90px;
+    width: 370px;
+    z-index: 93;
+}
+
+#elon-talk{
+    position: absolute;
+    left: 320px;
+    bottom: 230px;
+    width: 550px;
+    border-radius: 100px;
+    padding: 1rem;
+    color: black;
+    background-color: lightgrey;
+    text-align: center;
+    display: none;
+    z-index: 93;
+    font-family: fantasy;
+}
+
+#elon:hover ~ #elon-talk{
+    display: block;
+}
+/** ELON END **/
+
+
+
+/** PORTAL-ANIMATION START **/
+#portal{
+    position: absolute;
+    height: 200px;
+    left: 510px;
+    bottom: 5px;
+    z-index: 93;
+}
+
+#bear1{
+    position: absolute;
+    width: 160px;
+    left: 650px;
+    bottom: 10px; 
+    visibility: visible;
+    animation: bearMoves 4s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    z-index: 94;
+}
+
+#elon:active ~ #bear1{
+    animation-play-state: running;
+}
+
+@keyframes bearMoves{
+    0%{
+        left: 650px;
+        opacity: 1;
+    }
+    75%{
+        left: 520px;
+        opacity: 1;
+    }
+    100%{
+        left: 520px;
+        opacity: 0;
+    }
+}
+/** PORTAL-ANIMATION END **/
+
+
+
+/** SOUTH POLE START **/
+#south-pole{
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    z-index: 90;
+}
+
+#bear-talk{
+    position: absolute;
+    right: 200px;
+    bottom: 420px;
+    width: 290px;
+    border-radius: 100px;
+    padding: 1rem;
+    color: black;
+    background-color: lightgrey;
+    text-align: center;
+    opacity: 0;
+    z-index: 93;
+    font-family: fantasy;
+}
+
+#portal:hover ~ #south-pole{
+    animation: makeVisible 2s linear forwards;
+}
+
+#portal:hover ~ #bear1{
+    visibility: hidden;
+}
+
+#portal:hover ~ #bear-talk{
+    animation: makeVisible 2s linear forwards;
+    animation-delay: 2s;
+} 
+
+@keyframes makeVisible{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/** SOUTH POLE END **/
+
+
+
+/** DRONE **/
+#drone{
+    position: absolute;
+    width: 150px;
+    top: 250px;
+    left: -150px;
+    animation: droneFlies 9s infinite linear;
+}
+
+@keyframes droneFlies{
+    10%{
+        top: 200px;
+        left: 350px;
+    }
+    20%{
+        top: 120px;
+        left: 650px;
+        transform: rotate(-20deg);
+    }
+    30%{
+        top: 210px;
+        left: 950px;
+        transform: rotate(20deg);
+    }
+    40%{
+        top: 280px;
+        left: 1250px;
+        transform: rotate(0);
+    }
+    50%{
+        top: 260px;
+        left: 1400px;
+    }
+    60%{
+        transform: scaleX(-1);
+        top: 250px;
+        left: 1300px;
+        transform: rotate(20deg) scaleX(-1);
+    }
+    70%{
+        top: 180px;
+        left: 740px;
+        transform: rotate(10deg) scaleX(-1);
+    }
+    80%{
+        top: 110px;
+        left: 520px;
+        transform: rotate(-10deg) scaleX(-1) 
+    }
+    90%{
+        top: 105px;
+        left: 200px;
+        transform: rotate(-20deg) scaleX(-1)
+    }
+    100%{
+        left: -200px;
+        transform: scaleX(-1);
+    }
+}
+/** DRONE END **/

@@ -1,0 +1,222 @@
+/*Frithjof Solheim*/
+html, body, #anim-container, #background{
+    padding: auto;
+    margin: auto;
+    background-color: black;
+}
+
+#anim-container, #background{
+    height: 720px;
+    width: 1280px;
+}
+
+#anim-container, #background, #mecha-container, #mecha-tekst, .mecha-1,
+#ship-container, #ship, #putin, #putin-tekst, #starship{
+    position: relative;
+}
+#anim-container{
+    bottom: 785px;
+    overflow: hidden;
+}
+
+#background{
+    display: block;
+}
+
+/*start-mecha*/
+
+#mecha-container{
+    bottom: 400px;
+    width: 5px;
+    height: 1px;
+    
+}
+
+#mecha-tekst{
+    bottom: 250px;
+    border: 2px solid black;
+    width: 400px;
+    left: 800px;
+    background-color: white;
+    border-radius: 40px;
+    display: none;
+    z-index: 76;
+    padding: 10px;
+    font-size: 23px;
+    color: black;
+    font-family: fantasy;
+    text-align: center;
+}
+
+.mecha{
+    animation: moveUp 4s ease-in forwards;
+    animation-delay: 32s;
+}
+
+.mecha-1:hover ~ #mecha-tekst{
+    display: block;
+} 
+
+.mecha-1{
+    left: 450px;
+    bottom: 0px;
+    z-index: 5;
+    
+}
+
+.mecha-2, .mecha-3, .mecha-4, .mecha-5{
+    position: absolute;
+}
+
+.mecha-2{
+    bottom: -350px;
+    left: 320px;
+    z-index: 4;
+    width: 240px;
+}
+.mecha-3{
+    bottom: -300px;
+    left: 600px;
+    z-index: 3;
+    width: 200px;
+}
+
+.mecha-4{
+    bottom: -300px;
+    left: 250px;
+    z-index: 2;
+    width: 150px;
+}
+
+.mecha-5{
+    bottom: -340px;
+    left: 400px;
+    z-index: 1;
+    width: 150px;
+}
+
+@keyframes moveUp
+{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        bottom: 300px;
+    }
+}
+
+#ship-container{
+    bottom: 700px;
+    left: -400px;
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border: 10px solid white;
+    
+}
+
+#ship{
+    width: 300px;
+    left: -100px;
+    animation: shipMove 5s linear infinite;
+    animation-delay: 10s;
+
+}
+
+@keyframes shipMove{
+    0%{
+        left: 250px;
+        width: 100px;
+    }
+    100%{
+        left: 2000px;
+        width: 350px;
+    }
+}
+
+/*start-putin*/
+
+#putin-container{
+    bottom: 0px;
+    width: 0;
+}
+
+#putin{
+    width: 300px;
+    left: 0px;
+    animation: putinMove 3s linear forwards;
+    animation-delay: 2s;
+    z-index: 10;
+}
+
+#putin-tekst{
+    border: 2px solid black;
+    color: black;
+    margin: auto;
+    bottom: 875px;
+    left: 23px;
+    padding: 10px;
+    margin: 5px;
+    z-index:71;
+    font-size: 23px;
+    background-color: white;
+    width: 375px;
+    border-radius: 40px;
+    display: none;
+    text-align: center;
+    font-family: fantasy;
+}
+
+#putin:hover ~ #putin-tekst{
+    display: block;
+}
+
+@keyframes putinMove{
+    0%{bottom: 1px;}
+    100%{bottom:390px;}
+}
+
+/*end-putin*/
+
+/*start-starship*/
+
+#starship-container{
+    position: absolute;
+    bottom: 200px;
+}
+
+#starship{
+    width: 35px;
+    bottom: 200px;
+    left: 200px;
+    animation: starshipMove 30s ease-in-out forwards;
+    animation-delay: 5s;
+    z-index: 60;
+    overflow: hidden;
+    opacity: 0;
+}
+
+@keyframes starshipMove{
+    0%{
+        opacity: 1;
+        left: 400px;
+        width: 35px;
+        bottom: 350px;
+    }
+    100%{
+        opacity: 1;
+        left: -200px;
+        width: 1500px;
+        bottom: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+    

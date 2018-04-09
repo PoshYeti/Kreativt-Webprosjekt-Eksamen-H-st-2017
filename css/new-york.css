@@ -1,0 +1,78 @@
+/*Caroline Foss*/
+html, body{
+    position: relative;
+    margin: auto; 
+    padding: auto;
+    background-color: black;
+    width:  1280px; 
+    height: 720px;
+    overflow: hidden; 
+}
+
+
+#anim-container{
+    position: relative;
+    margin: auto; 
+    padding: auto;
+    background-color: black;
+    background-image: url(images/nyc.jpg);
+    background-repeat: no-repeat;
+    bottom: 782px;
+    height: 720px;
+    width: 1280px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#trump{
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    width: 250px;
+}
+
+#trump-talk{
+    position: absolute;
+    left: 300px;
+    bottom: 0;
+    width: 550px;
+    border-radius: 100px;
+    padding: 1rem;
+    color: black;
+    background-color: skyblue;
+    display: none;
+    font-family: fantasy;
+    text-align: center;
+}
+
+#trump:hover ~ #trump-talk{
+    display: block;
+}
+
+#holo-ef{
+    position: absolute;
+    left: 460px;
+    top: 20px;
+    width: 265px;
+    
+}
+
+#logo{
+    position: absolute;
+    left: 550px;
+    top: 120px;
+    width: 90px;
+    animation: holo-move 1s infinite ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes holo-move{
+    0%{
+        top: 120px;
+    }
+    100%{
+        top: 125px;
+    }
+}
+
+

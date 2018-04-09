@@ -1,0 +1,160 @@
+/*Richard Bolstad*/
+#somalia-container{
+    overflow: hidden;
+    height: 720px;
+    width: 1280px;
+    background-image: url(images/somaliadraw.jpg);
+    margin: auto;
+    padding: auto;
+    position: relative;
+    bottom: 782px;
+    background-color: darkred;
+    z-index: 10;
+}
+
+#pirate{
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+    transform: scaleX(-1);
+}
+
+#pirate:hover ~ #pirate-tekst{
+    display: block;
+}
+
+#pirate:active ~ #pirateboat{
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+}
+
+#pirate-tekst{
+    position: absolute;
+    color: black;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 40px;
+    width: 200px;
+    bottom: 250px;
+    right: 250px;
+    display: none;
+    text-align: center;
+    z-index: 11;
+    font-family: fantasy;
+}
+
+#pirateboat{
+    position: absolute;
+    transform: scaleX(-1);
+    width: 200px;
+    left: 100px;
+    bottom: 200px;
+    animation: pirateboat-moves 5s ease-in-out forwards;
+    animation-play-state: paused;
+    -webkit-animation: pirateboat-moves 5s ease-in-out forwards;
+    -webkit-animation-play-state: paused;
+}
+
+@keyframes pirateboat-moves{
+    0%{
+        left: 100px;
+        bottom: 200px;
+    }
+    50%{
+        left: -250px;
+        bottom: 350px;
+    }
+    100%{
+        left: 150px;
+        bottom: 550px;
+        transform: scaleX(1);
+        width: 50px;
+    }
+}
+
+@-webkit-keyframes pirateboat-moves{
+    0%{
+        left: 100px;
+        bottom: 200px;
+    }
+    50%{
+        left: -250px;
+        bottom: 350px;
+    }
+    100%{
+        left: 150px;
+        bottom: 550px;
+        transform: scaleX(1);
+        width: 50px;
+    }
+}
+
+#boat{
+    position: absolute;
+    left: 230px;
+    bottom: 565px;
+    width: 100px;
+    opacity: 1;
+    animation: boat-sinks 10s ease-in-out forwards;
+    animation-play-state: paused;
+    -webkit-animation: boat-sinks 10s ease-in-out forwards;
+    -webkit-animation-play-state: paused;
+    
+}
+
+#pirate:active ~ #boat{
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+}
+
+@keyframes boat-sinks{
+    0%{
+        left: 230px;
+        bottom: 565px;
+        width: 100px;
+    }
+    50%{
+        left: 230px;
+        bottom: 565px;
+        width: 100px;
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+        left: 230px;
+        bottom: 525px;
+        width: 100px;
+    }
+    100%{
+        opacity: 0;
+        left: 230px;
+        bottom: 505px;
+        width: 100px;
+    }
+}
+
+@-webkit-keyframes boat-sinks{
+    0%{
+        left: 230px;
+        bottom: 565px;
+        width: 100px;
+    }
+    50%{
+        left: 230px;
+        bottom: 565px;
+        width: 100px;
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+        left: 230px;
+        bottom: 525px;
+        width: 100px;
+    }
+    100%{
+        opacity: 0;
+        left: 230px;
+        bottom: 505px;
+        width: 100px;
+    }
+}

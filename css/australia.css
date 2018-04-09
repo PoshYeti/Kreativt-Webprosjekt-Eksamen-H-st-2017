@@ -1,0 +1,108 @@
+/*Richard Bolstad*/
+#sydney-container{
+    overflow: hidden;
+    height: 720px;
+    width: 1280px;
+    background-image: url(images/sydneydraw.jpg);
+    margin: auto;
+    padding: auto;
+    position: relative;
+    bottom: 782px;
+    background-color: darkred;
+    z-index: 10;
+}
+
+#surfer{
+    position: absolute;
+    width: 150px;
+    left: 50px;
+    bottom: 0px;
+    z-index: 10;
+}
+
+#surfer-tekst{
+    position: absolute;
+    color: black;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 40px;
+    width: 200px;
+    bottom: 300px;
+    left: 250px;
+    display: none;
+    text-align: center;
+    font-family: fantasy;
+}
+
+#surfer:hover ~ #surfer-tekst{
+    display: block;
+}
+
+#surfer:active ~ .wave{
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0px;
+    height: 200px;
+    right: -300px;
+    z-index: 10;
+    animation: wave-moves 4s linear infinite;
+    animation-play-state: paused;
+    -webkit-animation: wave-moves 4s linear infinite;
+    -webkit-animation-play-state: paused;
+}
+
+.wave1{
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+}
+
+.wave2{
+    animation-delay: .70s;
+    -webkit-animation-delay: .70s;
+}
+
+.wave3{
+    animation-delay: 1.4s;
+    -webkit-animation-delay: 1.4s;
+}
+
+.wave4{
+    animation-delay: 2.1s;
+    -webkit-animation-delay: 2.1s;
+}
+
+.wave5{
+    animation-delay: 2.8s;
+    -webkit-animation-delay: 2.8s;
+}
+
+.wave6{
+    animation-delay: 3.5s;
+    -webkit-animation-delay: 3.5s;
+}
+
+@keyframes wave-moves{
+    0%{
+        right: -300px;
+        bottom: 0px;
+    }
+    100%{
+        right: 1300px;
+        bottom: 0px;
+    }
+}
+
+@-webkit-keyframes wave-moves{
+    0%{
+        right: -300px;
+        bottom: 0px;
+    }
+    100%{
+        right: 1300px;
+        bottom: 0px;
+    }
+}

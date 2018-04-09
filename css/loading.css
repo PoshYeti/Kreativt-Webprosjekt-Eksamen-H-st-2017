@@ -1,0 +1,45 @@
+/*Richard Zacho, Loading*/
+html, body, #loading-container 
+{
+    margin: auto; 
+    padding: auto;
+    width:  1280px; 
+    height: 720px;
+    overflow: hidden;
+    background-color: black;
+}
+
+#loading-container
+{
+    position: relative;
+    z-index: 125;
+    background-color: black;
+    background-repeat: no-repeat;
+    left: 0px;
+    bottom: 30px;
+    
+    animation: fadeOut 5s linear forwards;
+}
+
+@keyframes fadeOut
+{
+    0%{opacity: 1; z-index: 100; background-color: white;}
+    50%{opacity: 1; z-index: 100; background-color: black;}
+    99%{opacity: 0; z-index: 1;}
+    100%{opacity: 0; z-index: 1;}
+}
+
+#loading
+{
+    position: absolute;
+    top: 100px;
+    left: 440px;
+}
+
+#year
+{
+    position: absolute;
+    width: 400px;
+    left: 450px;
+    bottom: -75px;
+}

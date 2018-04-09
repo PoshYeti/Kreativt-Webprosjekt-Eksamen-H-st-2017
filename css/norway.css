@@ -1,0 +1,123 @@
+/*Ivar Nikolaisen*/
+html, body{
+    position: relative;
+    margin: auto; 
+    padding: auto;
+    background-color: black;
+    width:  1280px; 
+    height: 720px;
+    overflow: hidden; 
+}
+
+
+#anim-container{
+    position: relative;
+    margin: auto; 
+    padding: auto;
+    background-color: black;
+    background-image: url(images/operaen-turbiner.png);
+    bottom: 782px;
+    height: 720px;
+    width: 1280px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#magnus{
+    position: absolute;
+    width: 400px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 10;
+}
+
+#magnus-quote{
+    position: absolute;
+    color: black;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 40px;
+    width: 200px;
+    bottom: 400px;
+    left: 275px;
+    display: none;
+    z-index:100;
+}
+
+#magnus:hover ~ #magnus-quote{
+    display: block;
+    z-index: 100;
+}
+
+#drone{
+    position: absolute;
+    left: 750px;
+    top: 100px;
+    width: 90px;
+    animation: drone 2s infinite;
+    animation-direction: alternate;
+    display:block;
+    
+    
+    
+}
+#drone-text{
+    position: absolute;
+    color: black;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 40px;
+    width: 200px;
+    bottom: 500px;
+    left: 450px;
+    display: none;
+    z-index:100;  
+    background-repeat: no-repeat;
+    text-align: center;
+
+}
+
+
+#drone:hover ~ #drone-text{
+    display: block;
+    z-index: 1000;
+    margin: auto;
+}
+#question{
+    position: absolute;
+    left: 160px;
+    bottom: 620px;
+    z-index: 1000;
+    display: block;
+    width: 60px;
+    height: 70px;
+    text-align: center;
+    
+}
+#question-answer{
+    position: absolute;
+    color: black;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 40px;
+    width: 200px;
+    bottom: 400px;
+    left: 275px;
+    display: none;
+    z-index:100;
+    text-align: center;
+    
+}
+#question:hover ~ #question-answer{
+    display:block;
+    z-index: 100;
+}
+
+@keyframes drone{
+    0%{
+        top: 80px;
+    }
+    100%{
+        top: 125px;
+    }
+}

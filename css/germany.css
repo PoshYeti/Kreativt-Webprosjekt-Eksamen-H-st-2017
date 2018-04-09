@@ -1,0 +1,131 @@
+/*Frithjof Solheim*/
+html, body{
+  
+    margin: auto; 
+    padding: auto;
+    width:  1280px; 
+    height: 720px;
+    overflow: hidden;
+}
+
+    
+#anim-container{
+    bottom: 785px;
+    margin: auto;
+    padding: auto;
+    height: 720px;
+    width: 1280px;
+    position: relative; 
+}
+
+#bakgrunn{
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+
+}
+
+#car-container{
+    position: absolute;
+    width: 10px;
+}
+
+#car{
+    position: relative;
+    width: 100px;
+    transform: scaleX(-1);
+    top: 100px;
+    animation: carMove 15s forwards;
+    padding: 0;
+    z-index: 15
+    
+}
+
+#shadow-container{
+    position: absolute;
+}
+
+#shadow{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    z-index: 100;
+    border-radius: 400px;
+    left: -200px;
+    top: 140px;
+    z-index: 10;
+    animation: shadowMove 15s forwards;
+}
+
+
+#michael{
+    position: relative;
+    top: 800px;
+    width: 400px;
+    position: relative;
+    animation: michaelMove 5s forwards;
+    animation-delay: 4s; 
+    z-index: 75;
+    
+}
+
+#michael-tekst{
+    position: absolute;
+    width: 150px;
+    height: 120px;
+    top: 400px;
+    left: 230px;
+    border-radius:10px;
+    background-color: white;
+    color: black;
+    padding-top: 20px;
+    display: none;
+    text-align: center;
+    font-family: fantasy;
+    z-index: 13;
+}
+
+#michael:hover ~ #michael-tekst{
+    display: block;
+}
+
+@keyframes carMove{
+    0%{
+        width: 100px;
+        left: -200px;
+    }
+    100%{
+        width: 300px;
+        left: 400px;
+        top: 400px;
+    }
+}
+
+@keyframes shadowMove{
+    0%{
+        width: 200px;
+        left; -200px
+    }
+    100%{
+        width: 400px;
+        left: 350px;
+    }
+}
+    
+@keyframes michaelMove{
+    0%{
+        top: 800px;
+    }
+    100%{
+        top: 450px;
+    }
+}
+  
+
+
+
+
+
+
+
+

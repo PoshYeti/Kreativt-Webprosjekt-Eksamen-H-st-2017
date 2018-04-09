@@ -1,0 +1,96 @@
+/*Caroline Foss*/
+html, body{
+    position: relative;
+    margin: auto; 
+    padding: auto;
+    background-color: black;
+    width:  1280px; 
+    height: 720px;
+    overflow: hidden; 
+}
+
+#anim-container{
+    position: relative;
+    margin: auto; 
+    padding: auto;
+    background-color: black;
+    background-image: url(images/tokyo.jpg);
+    background-repeat: no-repeat;
+    bottom: 782px;
+    height: 720px;
+    width: 1280px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/** NARUTO **/
+#naruto{
+    position: absolute;
+    left: -80px;
+    bottom: -760px;
+    width: 400px;
+    animation: naruto-up 1s ease-in-out;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    transform: scaleX(-1)
+}
+
+#naruto-talk{
+    position: absolute;
+    left: 10px;
+    bottom: 350px;
+    border-radius: 100px;
+    padding: 1.5rem;
+    width: 400px;
+    background-color: black;
+    text-align: center;
+    display: none;
+    z-index: 50;
+}
+
+#naruto:hover ~ #naruto-talk{
+    display: block;
+}
+
+@keyframes naruto-up{
+    0%{
+        bottom: -650px;
+    }
+    100%{
+        bottom: -400px;
+    }
+}
+/** NARUTO END **/
+
+
+/** ROBOT **/
+#robot{
+    position: absolute;
+    height: 560px;
+    left: 280px;
+    bottom: 30px;
+    animation: flight 5s infinite alternate ease-in-out;
+}
+
+#robot:hover{
+    animation-play-state: paused;
+}
+
+@keyframes flight{
+    0%{
+        bottom: 40px;
+    }
+    25%{
+        bottom: 60px;
+    }
+    50%{
+        bottom: 40px;
+    }
+    75%{
+        bottom: 50px;
+    }
+    100%{
+        bottom: 1190px;
+    }
+}
+/** ROBOT END **/

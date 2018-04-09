@@ -1,0 +1,153 @@
+/*Richard Zacho*/
+html, body 
+{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+}
+
+html, body, #anim-container
+{margin: auto; padding: auto;}
+
+html, body, #anim-container, #usa
+{width:  1280px; height: 720px;}
+
+html, body, #anim-container
+{overflow: hidden;}
+
+#anim-container, #usa-container, #usa, .pin, #pin-california, #pin-new-york, #pin-colorado, .text
+{position: relative;}
+
+#anim-container
+{bottom: 730px;}
+
+#usa-container
+{bottom: 0px;}
+
+#usa
+{
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    z-index: 5;
+    
+    animation: fadeIn 10s forwards;
+    animation-delay: 1s;
+}
+
+.pin
+{
+    height: 50px;
+    width: 50px;
+    bottom: 550px;
+    left: 500px;
+}
+
+.text
+{
+    opacity: 0;
+}
+
+#pin-california
+{
+    height: 100px;
+    width: 65px;
+    left: -440px;
+    bottom: 300px;
+    z-index: 50;
+    
+    animation: pinCalifornia 3s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes pinCalifornia
+{
+    0% {bottom: 250px;}
+    100% {bottom: -80px;}
+}
+
+.text-california
+{
+    bottom: 25px;
+    left: -375px;
+    animation: textCalifornia 0.5s infinite ease-out alternate;
+    animation-delay: 6s;
+    z-index: 50;
+}
+
+@keyframes textCalifornia
+{
+    0%{left -375px; opacity: 1;}
+    100%{left: -365px; opacity: .4;}
+}
+
+#pin-new-york
+{
+    height: 100px;
+    width: 65px;
+    left: 580px;
+    bottom: 400px;
+    z-index: 50;
+    
+    animation: pinNewYork 4s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes pinNewYork
+{
+    0% {bottom: 400px;}
+    100% {bottom: 120px;}
+}
+
+.text-new-york
+{
+    bottom: 225px;
+    left: 530px;
+    animation: textNewYork 0.5s infinite ease-out alternate;
+    animation-delay: 6s;
+    z-index: 50;
+}
+
+@keyframes textNewYork
+{
+    0%{left 530px; opacity: 1;}
+    100%{left: 540px; opacity: .4;}
+}
+
+#pin-colorado
+{
+    height: 100px;
+    width: 65px;
+    left: -140px;
+    bottom: 400px;
+    z-index: 100;
+    
+    animation: pinColorado 4s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes pinColorado
+{
+    0% {bottom: 400px;}
+    100% {bottom: 0px;}
+}
+
+.text-colorado
+{
+    bottom: 85px;
+    left: -75px;
+    animation: textColorado 0.5s infinite ease-out alternate;
+    animation-delay: 6s;
+    z-index: 50;
+}
+
+@keyframes textColorado
+{
+    0%{left -75px; opacity: 1;}
+    100%{left: -65px; opacity: .4;}
+}
+
+@keyframes fadeIn
+{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

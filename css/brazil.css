@@ -1,0 +1,143 @@
+/*Leo Jensen*/
+#container{
+    overflow: hidden;
+    height: 720px;
+    width: 1280px;
+    background-image: url(images/stadium.jpg);
+    background-repeat: no-repeat;
+    margin: auto;
+    padding: auto;
+    position: relative;
+    bottom: 786px;
+    z-index: 10;
+}
+    
+#ronaldinho{
+  position: absolute;
+    width: 400px;
+    left: 895px;
+    bottom: -16px;
+    z-index: 10; 
+}
+
+#airship-container{
+    z-index: 10;
+    bottom: 1350px;
+    margin: auto;
+    padding: auto;
+    height: 200px;
+    width: 600px;
+    position: relative;
+    background color: black
+}
+
+
+#run{
+    position: relative;
+    width:48px;
+    top: 490px;
+    left: 450px
+    
+}
+#run2{
+    position: relative;
+    width: 35px;
+    top: 450px;
+    left: 460px
+    
+}
+#run3{
+    transform: scaleX(-1); 
+    position: relative;
+    width: 43px;
+    top: 470px;
+    left: 700px
+       
+    
+}
+#run4{
+    transform: scaleX(-1); 
+    position: relative;
+    width: 50px;
+    top: 500px;
+    left: 750px
+}
+#fotball{
+    transform: rotate(90deg);
+position: relative;
+    width: 15px;
+    top: 462px;
+    left: 439px    
+    
+}
+#airship{
+    
+    transform: rotate(-5deg);
+    position: relative;
+    width: 200px;
+    top: 50px;
+    left: 15px;
+    animation: airship1 2s infinite alternate;
+        
+}
+@keyframes airship1{
+    0%{
+    top: 50px;
+    left: 15px;    
+    }
+    100%{
+    top: 40px;
+    left: 16px;  
+        
+    }
+    
+    
+}
+#run5{
+    transform: scaleX(-1);
+    position: relative;
+    width: 35px;
+    top: 450px;
+    left: 460px
+}
+#run6{
+    
+    position: relative;
+    width: 43px;
+    top: 470px;
+    left: 120px
+}
+#run7{
+    
+    position: relative;
+    width: 51px;
+    top: 504px;
+    left: 1px
+}
+#run8{
+    transform: scaleX(-1);
+    position: relative;
+    width: 50px;
+    top: 505px;
+    left: 390px
+}
+
+
+#ronaldinho-tekst{
+    z-index: 10;
+    position: absolute;
+    color: black;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 40px;
+    width: 200px;
+    bottom: 360px;
+    left: 860px;
+    display: none;
+    font-family: fantasy;
+    
+}
+
+#ronaldinho:hover ~ #ronaldinho-tekst{
+    display: block;
+}
